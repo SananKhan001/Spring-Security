@@ -26,6 +26,8 @@ public class SecurityConfig {
                 .hasAuthority(String.valueOf(Authority.TEACHER))
                 .requestMatchers("/home/**")
                 .authenticated()
+                .anyRequest()
+                .authenticated()
                 .and()
                 .formLogin();
 
